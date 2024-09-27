@@ -1,34 +1,35 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo de Matchup</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jogo de Match Up com Cliques e Linhas</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
 <body>
-    <h1 class="text-center">Jogo de MatchUp</h1>
-    <div class="container ">
-            <div class="terms row" id="terms">
-            </div>
-            <div class="descriptions row" id="descriptions">  
-            </div>
-            
-        
-            <div class="reset d-flex justify-content-center">
-                <button class="btn-reset" onclick="inicializar()"> <i class="large material-icons">autorenew</i></button>
-            </div>
-        </div>
-        
+  <div id="message"></div>
+  <div class="game-container">
+    <div id="leftColumn" class="column"></div>
+    <div id="rightColumn" class="column"></div>
+    <svg id="lines"></svg>
+  </div>
+  <div>
+    <button id="submitButton">Enviar</button>
+    <button id="resetButton">Resetar</button>
+  </div>
+  <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resultModalLabel">Resultado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center" id="modalMessage">
+      </div>
     </div>
-    <div class="informacoes">
-        <div class="mensagem">
-        </div>
-    </div>
-    
-    
-    <script src="js/script.js"></script>
-</body>
-</html>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body></html>
